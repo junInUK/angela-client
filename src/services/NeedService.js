@@ -1,5 +1,5 @@
 // const baseURL = 'http://localhost:3000/api/needs/'
-const baseURL = 'https://jars-angela.herokuapp.com/api/needs/'
+const baseURL = 'https://jars-angela.herokuapp.com/api/needs'
 
 export default {
   getNeeds() {
@@ -7,7 +7,8 @@ export default {
       .then(res => res.json())
   },
   addNeed(need) {
-    return fetch(baseURL, {
+    // return fetch("http://localhost:3000/api/needs/", {
+      return fetch("https://jars-angela.herokuapp.com/api/needs", {
       method: "POST",
       body: JSON.stringify(need),
       headers: {
