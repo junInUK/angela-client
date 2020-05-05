@@ -56,7 +56,8 @@ export default {
   },
   mounted(){
     console.log('Mounted is being triggered!')
-    fetch('http://localhost:3000/api/needs')
+//    fetch('http://localhost:3000/api/needs')
+    fetch('https://jars-angela.herokuapp.com/api/needs')
     .then( res => res.json())
     .then( needs => this.needs = needs )
     }
